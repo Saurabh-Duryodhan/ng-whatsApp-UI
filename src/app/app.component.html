@@ -5,18 +5,17 @@
             alt="user avatar">
         <div>
             <h5>Elon Musk</h5>
-            <p>status</p>
+            <p>{{status}}</p>
         </div>
     </header>
     <section class="message-section">
-        <div class="user-message">
-
-        </div>
+        <div class="user-message"></div>
     </section>
     <span>
         <div class="inputDiv">
-            <input placeholder="send message" type="text" (input)="handleInput($event)" />
-            <button (click)="sendMessage()">Send</button>
+            <input placeholder="send message" type="text" (input)="handleInput($event)"
+                (keydown)="enterKeyEvent($event)" />
+            <button [disabled]="message === ''" (keydown)="sendMessage()">Send</button>
         </div>
     </span>
 </div>

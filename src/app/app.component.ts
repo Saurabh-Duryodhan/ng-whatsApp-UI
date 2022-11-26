@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   message = '';
+  status = 'online';
+
+  enterKeyEvent(event: any) {
+    event.key !== 'Enter' || this.message === '' ? null : this.sendMessage();
+  }
 
   handleInput(event: Event) {
     this.message = (<HTMLInputElement>event.target).value;
@@ -19,6 +24,5 @@ export class AppComponent {
     const userMessage = document
       .querySelector('.user-message')
       ?.appendChild(elems);
-    console.log(userMessage);
   }
 }

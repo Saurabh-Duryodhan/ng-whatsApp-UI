@@ -6,12 +6,18 @@
 
 .message {
     margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.349);
+    background-color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin: 0;
-    color: white;
+    color: black;
     max-width: 175px;
-    padding: 5px 10px;
+    padding: 6px 10px;
     border-radius: 0px 0px 8px 0px;
+}
+
+
+input:focus {
+    border: none;
+    outline: none;
 }

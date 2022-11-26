@@ -4,8 +4,12 @@
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
             alt="user avatar">
         <div>
-            <h5>Elon Musk</h5>
-            <p>{{status}}</p>
+            <h5>Elon Musk
+            </h5>
+            <div [ngStyle]="{display: 'flex', alignItems: 'center', gap: '10px'}">
+                <p>{{status}}</p>
+                <div [ngStyle]="{height: '10px', width:'10px', borderRadius: '50%', backgroundColor: getColor()}"></div>
+            </div>
         </div>
     </header>
     <section class="message-section">
@@ -13,9 +17,10 @@
     </section>
     <span>
         <div class="inputDiv">
-            <input placeholder="send message" type="text" (input)="handleInput($event)"
+            <input class="inputElem" placeholder="send message" type="text" (input)="handleInput($event)"
                 (keydown)="enterKeyEvent($event)" />
-            <button *ngIf="message !== ''" [disabled]="message === ''" (click)="sendMessage()">Send</button>
+            <button class="btn" *ngIf="message !== ''" [disabled]="message === ''"
+                (click)="sendMessage($event)">Send</button>
         </div>
     </span>
 </div>

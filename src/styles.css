@@ -5,7 +5,6 @@
 }
 
 .message {
-    justify-content: end;
     margin-top: 20px;
     background-color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,7 +13,7 @@
     color: black;
     max-width: 175px;
     padding: 6px 10px;
-    border-radius: 0px 0px 8px 0px;
+    border-radius: 0px 0px 0px 8px;
 }
 
 

@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   message = '';
-  status = 'online';
+  status = true;
+
+  setStatus() {
+    this.status = true;
+  }
 
   enterKeyEvent(event: any) {
     event.key !== 'Enter' || this.message === '' ? null : this.sendMessage();

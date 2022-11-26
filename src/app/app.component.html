@@ -15,7 +15,7 @@
         <div class="inputDiv">
             <input placeholder="send message" type="text" (input)="handleInput($event)"
                 (keydown)="enterKeyEvent($event)" />
-            <button [disabled]="message === ''" (click)="sendMessage()">Send</button>
+            <button *ngIf="message !== ''" [disabled]="message === ''" (click)="sendMessage()">Send</button>
         </div>
     </span>
 </div>
